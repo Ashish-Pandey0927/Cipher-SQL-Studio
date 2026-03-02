@@ -161,43 +161,37 @@ $hard-color: #ef4444;
 }
 
 // Hints
-.hints {
-  background-color: #fffbf0;
-  border: 1px solid rgba($warning-orange, 0.3);
-  border-radius: 0.5rem;
+.hint-box {
+  margin-top: 1rem;
   padding: 1rem;
+  border-radius: 8px;
+  background-color: #f4f8ff;
+  border: 1px solid #cfe0ff;
+  animation: fadeIn 0.3s ease-in-out;
 
-  h3 {
-    margin: 0 0 0.75rem 0;
+  &__title {
     font-size: 0.95rem;
     font-weight: 600;
-    color: darken($warning-orange, 20%);
+    margin-bottom: 0.5rem;
+    color: #2b4cb3;
   }
 
-  ul {
-    margin: 0;
-    padding-left: 1.5rem;
-    list-style: none;
+  &__content {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #1f2937;
+  }
+}
 
-    li {
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      color: $text-light;
-      position: relative;
-      padding-left: 1rem;
-
-      &:before {
-        content: '→';
-        position: absolute;
-        left: 0;
-        color: $warning-orange;
-        font-weight: bold;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+/* Small animation so it feels alive */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -258,25 +252,15 @@ $hard-color: #ef4444;
   gap: 0.5rem;
 }
 
-// Textarea
-.editor-textarea {
+// Monaco Editor Container
+.editor-container {
   flex: 1;
-  padding: 1.25rem;
-  border: none;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: $text-dark;
-  background-color: $bg-white;
-  resize: none;
-  outline: none;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::placeholder {
-    color: #d1d5db;
+  border: 1px solid $border;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  
+  :global(.monaco-editor) {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   }
 }
 
@@ -520,8 +504,7 @@ $hard-color: #ef4444;
     gap: 0.75rem;
   }
 
-  .editor-textarea {
-    font-size: 0.8rem;
+  .editor-container {
     min-height: 200px;
   }
 
