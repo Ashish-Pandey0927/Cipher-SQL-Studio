@@ -107,7 +107,7 @@ The goal is to assist learning without revealing answers.
 
 #  Data Flow Diagram (DFD)
 
-![Data Flow Diagram](./docs/dfd.jpg)
+![Data Flow Diagram](./docs/dfd2.jpg)
 
 ### Query Execution Flow
 
@@ -150,17 +150,104 @@ User → React → `POST /api/hint`
 
 Create a `.env` file inside the backend folder:
 
-- MONGO_URI=
-- DATABASE_URL=
-- GEMINI_API_KEY=
-- PORT=5000
+```
+ MONGO_URI=
+ DATABASE_URL=
+ GEMINI_API_KEY=
+ PORT=5000
 
+```
 
 ---
 
 # ▶️ Installation & Setup
 
 ## 1️⃣ Clone Repository
- git clone<your-repo-url>
+```
+ git clone [https://github.com/Ashish-Pandey0927/Cipher-SQL-Studio](https://github.com/Ashish-Pandey0927/Cipher-SQL-Studio)
+
  cd CipherSQLStudio
+
+```
+
+
+---
+
+## 2️⃣ Backend Setup
+
+```
+cd backend
+npm install
+npm start
+
+```
+
+---
+
+## 3️⃣ Frontend Setup
+
+```
+cd frontend
+npm install
+npm run dev
+
+```
+
+---
+
+# 📌 Key Architectural Decisions
+
+- Two-database architecture separates metadata from execution logic.
+- Middleware-based validation ensures secure SQL handling.
+- Cloud PostgreSQL simulates real-world deployment.
+- Prompt engineering maintains educational integrity of the LLM.
+- Mobile-first SCSS ensures responsive usability.
+
+---
+
+# 📦 Folder Structure (Simplified)
+
+```
+backend/
+├─ controllers/
+├─ examples/
+├─ routes/
+├─ middleware/
+├─ config/
+├─ models/
+
+```
+```
+frontend/
+├─components/
+├─styles/
+
+```
+
+```
+docs/
+├─dfd1.jpeg
+├─dfd2.jpeg
+├─screenshot-assignments.png
+├─screenshot-editor.png
+├─screenshot-hint.png
+
+```
+
+
+---
+
+# 🎯 Project Goals
+
+- Provide a realistic SQL practice environment
+- Maintain secure execution boundaries
+- Deliver guided hints instead of direct answers
+- Demonstrate clear full-stack architecture
+
+---
+
+# 🧠 Author
+
+Ashish Pandey  
+Full Stack Developer
 
