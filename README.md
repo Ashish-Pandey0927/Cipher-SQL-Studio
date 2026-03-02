@@ -107,7 +107,7 @@ The goal is to assist learning without revealing answers.
 
 #  Data Flow Diagram (DFD)
 
-![Data Flow Diagram](./docs/dfd2.jpg)
+![Data Flow Diagram](./docs/dfd2.jpeg)
 
 ### Query Execution Flow
 
